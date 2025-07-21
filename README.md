@@ -1,4 +1,4 @@
-# 🧑‍🍳 Chef-Claude
+# Chef-Claude
 
 An AI-powered recipe generator that suggests delicious dishes based on the ingredients you have on hand. Built with React, Vite, and the Mistral language model.
 
@@ -112,7 +112,4 @@ This project demonstrates:
 
 
 
-## 👤 Author
-
-Created by \[farthestmage], powered by Mistral models.
 
