@@ -71,7 +71,7 @@ npm install
 3. Set your API key (in `.env`, serverless secrets, etc.):
 
 ```
-MISTRAL_API_KEY=your_api_key_here
+HUGGING FACE ACESS TOKEN
 ```
 
 4. Run in development mode:
