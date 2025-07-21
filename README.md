@@ -1,12 +1,118 @@
-# React + Vite
+# 🧑‍🍳 Chef-Claude
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered recipe generator that suggests delicious dishes based on the ingredients you have on hand. Built with React, Vite, and the Mistral language model.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+* **AI-powered recipe creation**: Enter your available ingredients and receive full recipe suggestions, including steps and serving sizes.
+* **Dynamic ingredient input**: Easily add or remove items as you type—no reloading needed.
+* **Auto-scroll to recipe**: Once generated, the page smoothly scrolls to your recipe output.
+* **Responsive UI**: Designed to work beautifully across mobile, tablet, and desktop interfaces.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend**
+
+  * React
+  * Vite (for fast HMR & bundling)
+  * React Markdown (for rendering recipe output)
+* **AI Integration**
+
+  * Mistral model (hosted locally or via API proxy)
+* **Backend**
+
+  * Serverless or lightweight backend to handle Mistral API calls
+
+---
+
+## 🧰 Project Structure
+
+```
+/src
+├── components/
+│   ├── Header.jsx           # App title & branding
+│   ├── IngredientsList.jsx  # Input interface for drafting ingredients
+│   ├── Recipe.jsx           # Displays the generated recipe
+│   └── Main.jsx             # Central orchestration & state logic
+├── App.jsx                  # Root component
+├── main.jsx                 # React app entry point
+└── index.css                # Global styles
+```
+
+---
+
+## ⚖️ Prerequisites
+
+1. **Node.js** v16+ and **npm**
+2. **Mistral API** (self-hosted or via third-party API)
+3. Configure your backend/serverless functions to securely handle API requests
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/farthestmage/Chef-Claude.git
+cd Chef-Claude
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Set your API key (in `.env`, serverless secrets, etc.):
+
+```
+MISTRAL_API_KEY=your_api_key_here
+```
+
+4. Run in development mode:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to explore.
+
+5. Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 📡 API Usage
+
+* User submits a list of 4+ ingredients.
+* Backend uses Mistral to produce a well-formatted markdown recipe.
+* Frontend renders the recipe and scrolls into view.
+
+---
+
+## 📖 Why Chef-Claude?
+
+This project demonstrates:
+
+* **React state management** with Hooks
+* **Async/Await** for clean data fetching
+* **AI prompt engineering** tailored for cooking
+* **Simple backend integration** for custom LLM use
+
+---
+
+
+
+## 👤 Author
+
+Created by \[farthestmage], powered by Mistral models.
+
